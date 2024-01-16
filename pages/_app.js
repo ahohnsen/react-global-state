@@ -13,12 +13,22 @@ const initialAnimals = [
 export default function App({ Component, pageProps }) {
   const [animals, setAnimals] = useState(initialAnimals);
 
-  function handleAdd() {
-    setCount(count + 1);
+  function handleAdd(animalId) {
+    setAnimals(
+      animals.map((animal) =>
+        animal.id === animalId ? { ...animal, count: animal.count + 1 } : animal
+      )
+    );
   }
 
-  function handleSubtract() {
-    setCount(Math.max(0, count - 1));
+  function handleSubtract(animalId) {
+    setAnimals(
+      animals.map((animal) =>
+        animal.id === animalId
+          ? { ...animal, count: Math.max(0, animal.count - 1) }
+          : animal
+      )
+    );
   }
 
   return (
