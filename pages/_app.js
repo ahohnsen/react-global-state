@@ -35,7 +35,12 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Layout>
-        <Component {...pageProps} animals={animals} />
+        <Component
+          {...pageProps}
+          animals={animals}
+          handleAdd={handleAdd}
+          handleSubtract={handleSubtract}
+        />
       </Layout>
     </>
   );
