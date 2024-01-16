@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -12,8 +11,6 @@ const AnimalName = styled.strong`
 `;
 
 export default function Counter({ animal }) {
-  const [count, setCount] = useState(0);
-
   function handleAdd() {
     setCount(count + 1);
   }
