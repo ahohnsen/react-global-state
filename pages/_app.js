@@ -13,6 +13,14 @@ const initialAnimals = [
 export default function App({ Component, pageProps }) {
   const [animals, setAnimals] = useState(initialAnimals);
 
+  function handleAdd() {
+    setCount(count + 1);
+  }
+
+  function handleSubtract() {
+    setCount(Math.max(0, count - 1));
+  }
+
   return (
     <>
       <GlobalStyle />

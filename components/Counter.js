@@ -11,14 +11,6 @@ const AnimalName = styled.strong`
 `;
 
 export default function Counter({ animal }) {
-  function handleAdd() {
-    setCount(count + 1);
-  }
-
-  function handleSubtract() {
-    setCount(Math.max(0, count - 1));
-  }
-
   return (
     <Container>
       <AnimalName>{animal.name}:</AnimalName>
