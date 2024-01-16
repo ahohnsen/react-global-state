@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Layout>
-        <Component {...pageProps} />
+        <Component {...pageProps} animals={animals} />
       </Layout>
     </>
   );
