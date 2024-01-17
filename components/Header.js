@@ -11,8 +11,7 @@ const StyledLink = styled(Link)`
   color: #fff;
 `;
 
-export default function Header() {
-  const countSum = "???";
+export default function Header({ countSum }) {
   return (
     <Title>
       <StyledLink href="/">
